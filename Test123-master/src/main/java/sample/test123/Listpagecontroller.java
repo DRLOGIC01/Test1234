@@ -68,6 +68,7 @@ public class Listpagecontroller implements Initializable {
 //                recept.id = recipes.getInt("Receptnr");
 //                recept.naam = recipes.getString("Naam");
                 testlijst.add(recipes.getString("Naam"));
+
             }
 
             ListItem01.setItems(testlijst);

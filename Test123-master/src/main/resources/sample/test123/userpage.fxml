@@ -1,71 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.BottomNavigation?>
-<?import com.gluonhq.charm.glisten.control.BottomNavigationButton?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="467.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.test123.UserPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="567.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.test123.UserPageController">
    <children>
-      <GridPane layoutY="6.0" prefHeight="567.0" prefWidth="467.0">
-         <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.0" minWidth="10.0" prefWidth="137.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.0" minWidth="10.0" prefWidth="184.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="129.0" />
-         </columnConstraints>
-         <rowConstraints>
-            <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="284.0" minHeight="10.0" prefHeight="237.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="430.0" minHeight="10.0" prefHeight="194.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="180.0" minHeight="5.0" prefHeight="72.0" vgrow="SOMETIMES" />
-         </rowConstraints>
-         <children>
-            <BottomNavigation prefWidth="468.0" GridPane.columnSpan="3" GridPane.rowIndex="3">
-               <actionItems>
-                  <BottomNavigationButton fx:id="BtShop" onMouseClicked="#Gotoshop" prefWidth="166.0" text="Shop">
-                     <graphic>
-                        <ImageView fitHeight="36.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="file:/C:/Users/seanm/Desktop/%C2%A0/Icons/icons8-add-shopping-cart-30.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </BottomNavigationButton>
-                  <BottomNavigationButton fx:id="BtHome" onMouseClicked="#GotoHome" text="Home">
-                     <graphic>
-                        <ImageView fitHeight="36.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="file:/C:/Users/seanm/Desktop/%C2%A0/Icons/icons8-home-page-30.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </BottomNavigationButton>
-                  <BottomNavigationButton fx:id="BtUser" onMouseClicked="#GoToUser" text="User">
-                     <graphic>
-                        <ImageView fitHeight="36.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="file:/C:/Users/seanm/Desktop/%C2%A0/Icons/icons8-user-48.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </BottomNavigationButton>
-               </actionItems>
-            </BottomNavigation>
-            <AnchorPane prefHeight="200.0" prefWidth="97.0" GridPane.rowIndex="2" />
-            <AnchorPane prefHeight="55.0" prefWidth="467.0" style="-fx-background-color: #CDE641;" GridPane.columnSpan="2147483647">
-               <children>
-                  <ImageView fitHeight="73.0" fitWidth="156.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="file:/C:/Users/seanm/Desktop/%C2%A0/Icons/logo-no-background.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </AnchorPane>
-         </children>
-      </GridPane>
+      <TextField fx:id="searchBar" layoutX="24.0" layoutY="24.0" prefHeight="35.0" prefWidth="345.0" />
+      <ListView fx:id="listView" layoutX="24.0" layoutY="69.0" prefHeight="309.0" prefWidth="345.0" />
+      <Button layoutX="378.0" layoutY="24.0" mnemonicParsing="false" onAction="#search" prefHeight="35.0" prefWidth="68.0" text="Search" />
    </children>
 </AnchorPane>

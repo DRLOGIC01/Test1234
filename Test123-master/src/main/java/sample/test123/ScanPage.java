@@ -9,11 +9,19 @@ import java.io.IOException;
 public class ScanPage {
 
     @FXML
+    private Button Gotomanual;
+
+    @FXML
     private Button BtBack;
 
     @FXML
     void GoBack(MouseEvent event) throws IOException {
-        HelloApplication.gotoscreen("hello-view");
+     HelloApplication.gotoscreen("hello-view");
+    }
+
+    @FXML
+    void GotoManual(MouseEvent event) throws IOException {
+        HelloApplication.gotoscreen("Manual");
     }
 
 }

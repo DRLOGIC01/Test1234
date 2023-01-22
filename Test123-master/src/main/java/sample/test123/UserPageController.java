@@ -1,36 +1,51 @@
 package sample.test123;
 
-import com.gluonhq.charm.glisten.control.BottomNavigationButton;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 
-import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.ResourceBundle;
+import java.util.stream.Collectors;
 
-public class UserPageController {
+public class UserPageController implements initiable{
+
+    ArrayList<String> words = new ArrayList<>(
+            Arrays.asList("test", "dog","Human", "Days of our life", "The best day",
+                    "Friends", "Animal", "Human", "Humans", "Bear", "Life",
+                    "This is some text", "Words", "222", "Bird", "Dog", "A few words",
+                    "Subscribe!", "SoftwareEngineeringStudent", "You got this!!",
+                    "Super Human", "Super", "Like")
+    );
 
     @FXML
-    private BottomNavigationButton BtShop;
+    private TextField searchBar;
 
     @FXML
-    private BottomNavigationButton BtHome;
+    private ListView<String> listView;
 
     @FXML
-    private BottomNavigationButton BtUser;
-
-
-    @FXML
-    void GoToUser(MouseEvent event) throws IOException {
-    HelloApplication.gotoscreen("userpage");
+    void search(ActionEvent event) {
+        listView.getItems().clear();
+        listView.getItems().addAll(searchList(searchBar.getText(),words));
     }
 
-    @FXML
-    void GotoHome(MouseEvent event) throws IOException {
-        HelloApplication.gotoscreen("hello-view");
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        listView.getItems().addAll(words);
     }
 
-    @FXML
-    void Gotoshop(MouseEvent event) throws IOException {
-        HelloApplication.gotoscreen("list page");
-      }
+    private List<String> searchList(String searchWords, List<String> listOfStrings) {
 
+        List<String> searchWordsArray = Arrays.asList(searchWords.trim().split(" "));
+
+        return listOfStrings.stream().filter(input -> {
+            return searchWordsArray.stream().allMatch(word ->
+                    input.toLowerCase().contains(word.toLowerCase()));
+        }).collect(Collectors.toList());
+    }
 }
