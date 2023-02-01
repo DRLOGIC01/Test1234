@@ -11,64 +11,64 @@
 <?import javafx.scene.layout.RowConstraints?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="467.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.test123.HelloController">
-   <children>
-      <GridPane layoutY="6.0" prefHeight="567.0" prefWidth="467.0">
-        <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.0" minWidth="10.0" prefWidth="137.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.0" minWidth="10.0" prefWidth="184.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="129.0" />
-        </columnConstraints>
-        <rowConstraints>
-            <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="284.0" minHeight="10.0" prefHeight="237.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="430.0" minHeight="10.0" prefHeight="194.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="180.0" minHeight="5.0" prefHeight="72.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <BottomNavigation prefWidth="468.0" GridPane.columnSpan="3" GridPane.rowIndex="3">
-                <actionItems>
-                    <BottomNavigationButton fx:id="BtShop" onMouseClicked="#Gotoshop" prefWidth="166.0" text="Shop">
-                     <graphic>
-                        <ImageView fitHeight="36.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../Pictures01/icons8-add-shopping-cart-30.png" />
-                           </image>
+    <children>
+        <GridPane layoutY="6.0" prefHeight="567.0" prefWidth="467.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.0" minWidth="10.0" prefWidth="137.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.0" minWidth="10.0" prefWidth="184.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="129.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="284.0" minHeight="10.0" prefHeight="237.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="430.0" minHeight="10.0" prefHeight="194.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="180.0" minHeight="5.0" prefHeight="72.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <BottomNavigation prefWidth="468.0" GridPane.columnSpan="3" GridPane.rowIndex="3" style="-fx-background-color: #CDE641;">
+                    <actionItems>
+                        <BottomNavigationButton fx:id="BtShop" onMouseClicked="#Gotoshop" prefWidth="166.0" text="Shop">
+                            <graphic>
+                                <ImageView fitHeight="36.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../Pictures01/icons8-add-shopping-cart-30.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </BottomNavigationButton>
+                        <BottomNavigationButton fx:id="BtHome" onMouseClicked="#GotoHome" text="Home">
+                            <graphic>
+                                <ImageView fitHeight="36.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../Pictures01/icons8-home-page-30.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </BottomNavigationButton>
+                        <BottomNavigationButton fx:id="BtUser" onMouseClicked="#GoToUser" text="User">
+                            <graphic>
+                                <ImageView fitHeight="36.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../Pictures01/icons8-user-48.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </BottomNavigationButton>
+                    </actionItems>
+                </BottomNavigation>
+                <Button fx:id="BtWeigh" mnemonicParsing="false" onMouseClicked="#GoToWeigh" text="Weigh" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" style="-fx-background-color: #CDE641" />
+                <AnchorPane prefHeight="200.0" prefWidth="97.0" GridPane.rowIndex="2" />
+                <AnchorPane prefHeight="55.0" prefWidth="467.0" style="-fx-background-color: #CDE641;" GridPane.columnSpan="2147483647">
+                    <children>
+                        <ImageView fitHeight="73.0" fitWidth="156.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../Pictures01/logo-no-background.png" />
+                            </image>
                         </ImageView>
-                     </graphic>
-                    </BottomNavigationButton>
-                    <BottomNavigationButton fx:id="BtHome" onMouseClicked="#GotoHome" text="Home">
-                     <graphic>
-                        <ImageView fitHeight="36.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../Pictures01/icons8-home-page-30.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                    </BottomNavigationButton>
-                    <BottomNavigationButton fx:id="BtUser" onMouseClicked="#GoToUser" text="User">
-                     <graphic>
-                        <ImageView fitHeight="36.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../Pictures01/icons8-user-48.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                    </BottomNavigationButton>
-                </actionItems>
-            </BottomNavigation>
-            <Button fx:id="BtWeigh" mnemonicParsing="false" onMouseClicked="#GoToWeigh" text="Weigh" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-            <AnchorPane prefHeight="200.0" prefWidth="97.0" GridPane.rowIndex="2" />
-            <AnchorPane prefHeight="55.0" prefWidth="467.0" style="-fx-background-color: #CDE641;" GridPane.columnSpan="2147483647">
-               <children>
-                  <ImageView fitHeight="73.0" fitWidth="156.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../Pictures01/logo-no-background.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </AnchorPane>
-            <Button fx:id="BtScan" mnemonicParsing="false" onMouseClicked="#GoToScan" text="Scan" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-         </children>
-      </GridPane>
-   </children>
+                    </children>
+                </AnchorPane>
+                <Button fx:id="BtScan" mnemonicParsing="false" onMouseClicked="#GoToScan" text="Scan" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" style="-fx-background-color: #CDE641" />
+            </children>
+        </GridPane>
+    </children>
 </AnchorPane>

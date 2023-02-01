@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="java">
+    <CLASSES />
+    <JAVADOC>
+      <root url="file://$USER_HOME$/Downloads/zxing-zxing-3.5.1/zxing-zxing-3.5.1/docs/apidocs" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://$USER_HOME$/Downloads/zxing-zxing-3.5.1/zxing-zxing-3.5.1/android-core/src/main/java" />
+      <root url="file://$USER_HOME$/Downloads/zxing-zxing-3.5.1/zxing-zxing-3.5.1/android-integration/src/main/java" />
+      <root url="file://$USER_HOME$/Downloads/zxing-zxing-3.5.1/zxing-zxing-3.5.1/android/src" />
+      <root url="file://$USER_HOME$/Downloads/zxing-zxing-3.5.1/zxing-zxing-3.5.1/core/src/main/java" />
+      <root url="file://$USER_HOME$/Downloads/zxing-zxing-3.5.1/zxing-zxing-3.5.1/core/src/test/java" />
+      <root url="file://$USER_HOME$/Downloads/zxing-zxing-3.5.1/zxing-zxing-3.5.1/javase/src/main/java" />
+      <root url="file://$USER_HOME$/Downloads/zxing-zxing-3.5.1/zxing-zxing-3.5.1/javase/src/test/java" />
+      <root url="file://$USER_HOME$/Downloads/zxing-zxing-3.5.1/zxing-zxing-3.5.1/zxing.appspot.com/src/main/java" />
+      <root url="file://$USER_HOME$/Downloads/zxing-zxing-3.5.1/zxing-zxing-3.5.1/zxingorg/src/main/java" />
+      <root url="file://$USER_HOME$/Downloads/zxing-zxing-3.5.1/zxing-zxing-3.5.1/zxingorg/src/test/java" />
+    </SOURCES>
+  </library>
+</component>

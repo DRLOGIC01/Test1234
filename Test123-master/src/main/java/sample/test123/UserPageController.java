@@ -1,51 +1,19 @@
 package sample.test123;
 
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.ResourceBundle;
-import java.util.stream.Collectors;
+import java.io.IOException;
 
-public class UserPageController implements initiable{
-
-    ArrayList<String> words = new ArrayList<>(
-            Arrays.asList("test", "dog","Human", "Days of our life", "The best day",
-                    "Friends", "Animal", "Human", "Humans", "Bear", "Life",
-                    "This is some text", "Words", "222", "Bird", "Dog", "A few words",
-                    "Subscribe!", "SoftwareEngineeringStudent", "You got this!!",
-                    "Super Human", "Super", "Like")
-    );
-
-    @FXML
-    private TextField searchBar;
-
-    @FXML
-    private ListView<String> listView;
-
-    @FXML
-    void search(ActionEvent event) {
-        listView.getItems().clear();
-        listView.getItems().addAll(searchList(searchBar.getText(),words));
+public class UserPageController {
+    public void Gotoshop(MouseEvent mouseEvent) throws IOException {
+        HelloApplication.gotoscreen("List page");
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        listView.getItems().addAll(words);
+    public void GotoHome(MouseEvent mouseEvent) throws IOException {
+        HelloApplication.gotoscreen("hello-view");
     }
 
-    private List<String> searchList(String searchWords, List<String> listOfStrings) {
-
-        List<String> searchWordsArray = Arrays.asList(searchWords.trim().split(" "));
-
-        return listOfStrings.stream().filter(input -> {
-            return searchWordsArray.stream().allMatch(word ->
-                    input.toLowerCase().contains(word.toLowerCase()));
-        }).collect(Collectors.toList());
+    public void GoToUser(MouseEvent mouseEvent) throws IOException {
+        HelloApplication.gotoscreen("userpage");
     }
 }

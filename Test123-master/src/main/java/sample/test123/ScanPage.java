@@ -16,12 +16,12 @@ public class ScanPage {
 
     @FXML
     void GoBack(MouseEvent event) throws IOException {
-     HelloApplication.gotoscreen("hello-view");
+        HelloApplication.gotoscreen("hello-view");
     }
 
     @FXML
     void GotoManual(MouseEvent event) throws IOException {
-        HelloApplication.gotoscreen("Manual");
+        HelloApplication.gotoscreen("");
     }
 
 }
